@@ -13,22 +13,19 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'tpope/vim-sensible'
 Plug 'https://git.drupal.org/project/vimrc.git', { 'branch': '7.x-1.x', 'rtp': 'bundle/vim-plugin-for-drupal' }
+Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 call plug#end()
 
-" Ctrl+p settings.
-"let g:ctrlp_map='<c-p>'
-"let g:ctrlp_cmd='CtrlP'
-"let g:ctrlp_working_path_mode='ra'
-"if exists("g:ctrlp_user_command")
-"				  unlet g:ctrlp_user_command
-"endif
-
+" Key remappings.
+noremap <Tab> :NERDTreeToggle <CR>
 noremap <c-p> :FZF <CR>
 
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.tar,*.gz,*/libraries/*,*/vendor/*
+let NERDTreeShowHidden=1
 
 " Enhance command-line completion.
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.tar,*.gz,*/libraries/*,*/vendor/*
 set wildmenu
 
 " Add the g flag to search/replace by default.
@@ -39,6 +36,10 @@ set number
 
 " Enable syntax highlighting.
 syntax on
+
+" Make window splits more natural.
+set splitbelow
+set splitright
 
 " Make tabs as wide as two spaces.
 set tabstop=2
@@ -61,27 +62,20 @@ set mouse=a
 " Show the filename in the window titlebar.
 set title
 
-" No banner. 
+" Netrw config.
 let g:netrw_banner = 0
-
-" List files in tree style.
 let g:netrw_liststyle = 3
-
-" Open files in last window. 
 let g:netrw_browse_split = 4
-
 let g:netrw_altv = 1
-
-" Set window size of file explorer. 
 let g:netrw_winsize = 20
 
-" Map Tab to open explorer window. 
-noremap <Tab> :Lexplore <CR>
-
-syntax on 
 
 if has("autocmd")
-" Drupal *.module and *.install files.
+
+  " Close Vim if Nerdtree is the only thing open. 
+  autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+  " Drupal *.module and *.install files.
   augroup module
     autocmd BufRead,BufNewFile *.module set filetype=php
     autocmd BufRead,BufNewFile *.install set filetype=php
@@ -90,5 +84,7 @@ if has("autocmd")
     autocmd BufRead,BufNewFile *.profile set filetype=php
     autocmd BufRead,BufNewFile *.view set filetype=php
   augroup END
+
 	autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
 endif

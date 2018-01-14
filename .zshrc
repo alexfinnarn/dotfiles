@@ -17,9 +17,7 @@ fi
 # or prepend
 #path=('/home/david/pear/bin' $path)
 # export to sub-processes (make it inherited by child processes)
-export PATH="/Users/alfi2595/.composer/vendor/bin:$PATH"
-
-export PATH="/Users/alfi2595/./vendor/bin:$PATH"
+export PATH="${HOME}/.composer/vendor/bin:$PATH"
 
 alias l='ls -alFh'
 

@@ -1,5 +1,6 @@
 {
     "window.zoomLevel": 1,
+    "gitlens.keymap": "alternate",
     "gitlens.advanced.messages": {
         "suppressCommitHasNoPreviousCommitWarning": false,
         "suppressCommitNotFoundWarning": false,
@@ -15,6 +16,7 @@
     "explorer.openEditors.visible": 0,
     "workbench.activityBar.visible": false,
     "editor.renderWhitespace": "all",
+    "editor.tabSize": 2,
     "vim.insertModeKeyBindings": [
         {
             "before": ["j","j"],
@@ -28,7 +30,5 @@
         "javascriptreact",
         "vue",
         "vue-html"
-    ],
-    "editor.tabSize": 2,
-    "gitlens.keymap": "alternate",
+    ]
 }

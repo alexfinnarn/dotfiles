@@ -1,2 +1,2 @@
-My dotfiles in all their glory.
+My dotfiles in all their wonderful glory.
 

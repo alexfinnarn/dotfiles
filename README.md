@@ -16,10 +16,23 @@ I put shit in `~/Sites` at this point. But dotfiles aren't "sites" Alex? Go shut
 
 Beer you say? Well this ain't as fun, but we gotta use it. I mean, it is fun. Yay! https://brew.sh/
 
+### Zsh
+
+Why's your terminal still look like Capser the Friendly Ghost, bro? Time for a change. This man's no Casper...
+https://sourabhbajaj.com/mac-setup/iTerm/zsh.html
+
+You better remember you have a Zprezto config file in this repo so choose that over "Oh My Zsh"...no wait, just choose it cause the name sucks so much less hyenas' assholes. 
+
+But only do the first line of cloning the stuff. I would copy it over here, but that dude is more likely to update his words when things change than I am.
+
+```bash
+cp ./.zshrc ~/
+cp ./.zpreztorc ~/
+```
+
+You'll need to set the shell in the terminal prompt's preferences. Also, you'll need to set "Homebrew" as the defualt theme. Conspiracy?
+
 ### PhpStorm
 
 The included JAR file in this repo is enough to get that damn annoying termnial bar to behave. I'll tell you that much so far...
 
-### Zsh
-
-Weren't it great. 

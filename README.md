@@ -36,3 +36,6 @@ You'll need to set the shell in the terminal prompt's preferences. Also, you'll 
 
 The included JAR file in this repo is enough to get that damn annoying termnial bar to behave. I'll tell you that much so far...
 
+### Node
+
+The Node project keeps changing how it wants you to install itself. Currently, you just download it from https://nodejs.org/en/. Don't try to install it via the Homebrew.

@@ -33,7 +33,7 @@ source ~/.zshrc
 
 You'll need to set the shell in the terminal prompt's preferences. `Preferences -> General -> Command (complete path)` = `/bin/zsh`.
 
-Also, you'll need to set "Homebrew" as the defualt theme. Conspiracy?
+Also, you'll need to set "Homebrew" as the defualt theme. Conspiracy? `Preferences -> Profiles` then click "Homebrew" and "Default" down by the +/- buttons. I got confused when I selected the profile and it didn't stick...I forgot to set the new theme to default before I closed preferences.
 
 ### PhpStorm
 

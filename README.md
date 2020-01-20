@@ -28,9 +28,12 @@ But only do the first line of cloning the stuff. I would copy it over here, but 
 ```bash
 cp ./.zshrc ~/
 cp ./.zpreztorc ~/
+source ~/.zshrc
 ```
 
-You'll need to set the shell in the terminal prompt's preferences. Also, you'll need to set "Homebrew" as the defualt theme. Conspiracy?
+You'll need to set the shell in the terminal prompt's preferences. `Preferences -> General -> Command (complete path)` = `/bin/zsh`.
+
+Also, you'll need to set "Homebrew" as the defualt theme. Conspiracy?
 
 ### PhpStorm
 

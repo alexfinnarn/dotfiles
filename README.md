@@ -28,6 +28,9 @@ But only do the first line of cloning the stuff. I would copy it over here, but 
 ```bash
 cp ./.zshrc ~/
 cp ./.zpreztorc ~/
+
+# Download zpresto.tar file from Google Drive and move to ~/.zpresto.
+
 source ~/.zshrc
 ```
 
